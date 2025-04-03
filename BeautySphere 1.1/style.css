@@ -1,0 +1,226 @@
+
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    background-color: #fff;
+    padding: 1rem 0;
+}
+
+/* Отступ сверху для кнопок в разделе 'КТО МЫ?' и 'ПОЧЕМУ НАМ ДОВЕРЯЮТ?' */
+#about .grid-item .button.primary, 
+#team .grid-item .button.primary {
+    margin-top: 30px; /* Отступ сверху для кнопки */
+}
+
+/* Навигация */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.logo-image {
+    max-width: 100px;
+    height: auto;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #ff6f61;
+}
+
+/* Общие стили для кнопок */
+.button {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px; /* Более скругленные углы */
+    transition: all 0.3s ease; /* Плавный переход */
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+
+/* Кнопка "Подробнее" */
+.button.secondary {
+    background-color: #B0BEC5; /* Светло-серый оттенок */
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для объема */
+}
+
+
+.button.secondary:hover {
+    background-color: #90A4AE; /* Немного темнее при наведении */
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Усиленная тень при наведении */
+    transform: translateY(-2px); /* Легкий подъем при наведении */
+}
+
+/* Кнопка "Все новости" */
+.button.primary {
+    background-color: #000;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button.primary:hover {
+    background-color: #444;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Усиленная тень при наведении */
+    transform: translateY(-2px); /* Легкий подъем при наведении */
+}
+
+/* Hero Section (Баннер) */
+.hero {
+    position: relative;
+    background-color: #FFB74D;
+    color: #fff;
+    height: 510px; /* Высота баннера */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Выравнивание текста по верху */
+    overflow: hidden;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 10;
+    left: 5%;
+    top: 20%; /* Текст поднят выше */
+    max-width: 50%;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Фон занимает всю ширину */
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Разделы */
+.section {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.grid-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.news-item {
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.news-title {
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* CTA */
+.cta {
+    background-color: #f8f8f8;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.grid-item p {
+    margin-bottom: 1.5rem; /* или больше, если нужно */
+}
