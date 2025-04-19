@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeautySphere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header (Шапка) -->
+
+    <header class="header">
+        <div class="container">
+            <nav class="navigation">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.jpg" alt="BeautySphere Logo" class="logo-image" />
+                </a>
+
+                <!-- Main nav list -->
+                <ul class="nav-list">
+                    <!-- О нас dropdown -->
+                    <li class="nav-item dropdown">
+                        <a href="about.html">О нас</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html#clinic">О клинике</a></li>
+                            <li><a href="about.html#team">Специалисты</a></li>
+                            <li><a href="news.html">Новости</a></li>
+                            <li><a href="index.html#contact">Контакты</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Услуги multilevel dropdown -->
+                    <li class="nav-item dropdown">
+                        <a href="services.html">Услуги</a>
+                        <ul class="dropdown-menu">
+                            <!-- Лицо -->
+                            <li class="nav-item dropdown">
+                                <a href="services.html#face">Лицо</a>
+                                <ul class="dropdown-menu">
+                                    <!-- Аппаратная косметология -->
+                                    <li class="nav-item dropdown">
+                                        <a href="services.html#face-hardware">Аппаратная косметология</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="services.html#rf-lifting">RF‑лифтинг</a></li>
+                                            <li><a href="services.html#ultrasound-clean">Ультразвуковая чистка</a></li>
+                                            <li><a href="services.html#microcurrent">Микротоковая терапия</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- Инъекционная косметология -->
+                                    <li class="nav-item dropdown">
+                                        <a href="services.html#face-injection">Инъекционная косметология</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="services.html#botox">Ботулинотерапия</a></li>
+                                            <li><a href="services.html#mesotherapy">Мезотерапия</a></li>
+                                            <li><a href="services.html#biorevitalization">Биоревитализация</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- Уходовые процедуры -->
+                                    <li class="nav-item dropdown">
+                                        <a href="services.html#face-care">Уходовые процедуры</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="services.html#masks-peels">Маски и пилинги</a></li>
+                                            <li><a href="services.html#hydration">Увлажняющие комплексы</a></li>
+                                            <li><a href="services.html#antiacne">Антиакне‑программы</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Тело -->
+                            <li class="nav-item dropdown">
+                                <a href="services.html#body">Тело</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="services.html#anticell-massage">Антицеллюлитный массаж</a></li>
+                                    <li><a href="services.html#lymphatic">Лимфодренаж</a></li>
+                                    <li><a href="services.html#wraps">Обертывания</a></li>
+                                    <li><a href="services.html#cryolipolysis">Криолиполиз</a></li>
+                                    <li><a href="services.html#lpg">LPG‑массаж</a></li>
+                                    <li><a href="services.html#body-shaping">Программы коррекции фигуры</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Other simple links -->
+                    <li><a href="index.html#promotions">Акции</a></li>
+                    <li><a href="price.html">Цены</a></li>
+                </ul>
+
+                <!-- Call‑to‑action button -->
+                <a href="mailto:mail@business.com?subject=Записаться" class="button primary">ЗАПИСАТЬСЯ К НАМ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO‑SLIDER ===== -->
+    <section id="hero" class="hero">
+        <!-- 1‑й слайд -->
+        <div class="slide active">
+            <img src="assets/hero-bg.jpg" alt="" class="hero-image">
+            <div class="hero-content">
+                <h1 class="hero-title">BEAUTY SPHERE<br>открывает двери<br>в мир красоты!</h1>
+                <p class="hero-subtitle">Быть красивой и уверенной — под силу каждой!</p>
+                <a href="news/news-opening.html" class="button secondary">ПОДРОБНЕЕ</a>
+            </div>
+        </div>
+
+        <!-- 2‑й слайд -->
+        <div class="slide">
+            <img src="assets/hero-bg.jpg" alt="" class="hero-image">
+            <div class="hero-content">
+                <h1 class="hero-title">Современные<br>косметологические<br>технологии</h1>
+                <p class="hero-subtitle">Мы работаем на результат</p>
+                <a href="services.html" class="button secondary">УСЛУГИ</a>
+            </div>
+        </div>
+
+        <!-- стрелки – внутри hero! -->
+        <button class="slider-arrow prev" aria-label="Предыдущий слайд">&#10094;</button>
+        <button class="slider-arrow next" aria-label="Следующий слайд">&#10095;</button>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">КТО МЫ?</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <h3 class="label">О BEAUTY SPHERE</h3>
+                    <p>Мы являемся одной из самых передовых клиник косметологии. Наша клиника существует с 2005 года, за
+                        это время мы помогли многим людям обрести уверенность в себе и вернуть былую красоту.</p>
+                    <a href="about.html" class="button primary">О НАС</a>
+                </div>
+                <img src="assets/cop1.jpg" alt="About Us" class="grid-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team">
+        <div class="container">
+            <h2 class="section-title">Почему нам доверяют?</h2>
+            <div class="grid">
+                <img src="assets/team-image.jpg" alt="Our Team" class="grid-image">
+                <div class="grid-item">
+                    <h3 class="label">КОМАНДА</h3>
+                    <p>Наша команда — это первоклассные специалисты с многолетним стажем, которые знают своё дело.</p>
+                    <a href="#team" class="button primary">СПЕЦИАЛИСТЫ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="section news">
+        <div class="container">
+            <h2 class="section-title">НОВОСТИ</h2>
+            <div class="news-grid" id="latest-news"></div>
+            <div style="margin-top: 40px;">
+                <a href="news.html" class="button primary">ВСЕ НОВОСТИ</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">ЖДЁМ ВАС!</h2>
+            <p class="cta-text">ТЕСТ</p>
+            <a href="#contact" class="button primary">ЗАПИСАТЬСЯ</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 BeautySphere. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

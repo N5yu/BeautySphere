@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Прайс‑лист – BeautySphere</title>
+
+  <!-- Подключаем общий стиль сайта -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Локальные стили аккордеона -->
+  <style>
+    /* аккордеон оформляем в фирменных цветах */
+    details.price-item {
+      border: 1px solid #f0f0f0;
+      border-radius: 8px;
+      margin: 12px 0;
+      padding: 14px 18px;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    }
+    details.price-item summary {
+      font-size: 1.3rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+      padding-right: 26px;
+    }
+    details.price-item summary::after {
+      content: "›";
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 1.4rem;
+      color: #ff6f61; /* основной акцент сайта */
+      transform: rotate(90deg);
+      transition: transform .3s ease;
+    }
+    details.price-item[open] summary::after {
+      transform: rotate(-90deg);
+    }
+
+    details.price-item table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    details.price-item td {
+      padding: 8px 4px;
+      font-size: 1rem;
+    }
+    details.price-item td:last-child {
+      text-align: right;
+      white-space: nowrap;
+    }
+    details.price-item tr:not(:last-child) td {
+      border-bottom: 1px dotted #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER (копия общей навигации) ===== -->
+<header class="header">
+  <div class="container">
+    <nav class="navigation">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="assets/logo.jpg" alt="BeautySphere Logo" class="logo-image" />
+      </a>
+
+      <!-- Main nav list -->
+      <ul class="nav-list">
+        <!-- О нас dropdown -->
+        <li class="nav-item dropdown">
+          <a href="about.html">О нас</a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html#clinic">О клинике</a></li>
+            <li><a href="about.html#team">Специалисты</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="index.html#contact">Контакты</a></li>
+          </ul>
+        </li>
+
+        <!-- Услуги multilevel dropdown -->
+        <li class="nav-item dropdown">
+          <a href="services.html">Услуги</a>
+          <ul class="dropdown-menu">
+            <!-- Лицо -->
+            <li class="nav-item dropdown">
+              <a href="services.html#face">Лицо</a>
+              <ul class="dropdown-menu">
+                <!-- Аппаратная косметология -->
+                <li class="nav-item dropdown">
+                  <a href="services.html#face-hardware">Аппаратная косметология</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="services.html#rf-lifting">RF‑лифтинг</a></li>
+                    <li><a href="services.html#ultrasound-clean">Ультразвуковая чистка</a></li>
+                    <li><a href="services.html#microcurrent">Микротоковая терапия</a></li>
+                  </ul>
+                </li>
+                <!-- Инъекционная косметология -->
+                <li class="nav-item dropdown">
+                  <a href="services.html#face-injection">Инъекционная косметология</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="services.html#botox">Ботулинотерапия</a></li>
+                    <li><a href="services.html#mesotherapy">Мезотерапия</a></li>
+                    <li><a href="services.html#biorevitalization">Биоревитализация</a></li>
+                  </ul>
+                </li>
+                <!-- Уходовые процедуры -->
+                <li class="nav-item dropdown">
+                  <a href="services.html#face-care">Уходовые процедуры</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="services.html#masks-peels">Маски и пилинги</a></li>
+                    <li><a href="services.html#hydration">Увлажняющие комплексы</a></li>
+                    <li><a href="services.html#antiacne">Антиакне‑программы</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Тело -->
+            <li class="nav-item dropdown">
+              <a href="services.html#body">Тело</a>
+              <ul class="dropdown-menu">
+                <li><a href="services.html#anticell-massage">Антицеллюлитный массаж</a></li>
+                <li><a href="services.html#lymphatic">Лимфодренаж</a></li>
+                <li><a href="services.html#wraps">Обертывания</a></li>
+                <li><a href="services.html#cryolipolysis">Криолиполиз</a></li>
+                <li><a href="services.html#lpg">LPG‑массаж</a></li>
+                <li><a href="services.html#body-shaping">Программы коррекции фигуры</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Other simple links -->
+        <li><a href="index.html#promotions">Акции</a></li>
+        <li><a href="index.html#prices">Цены</a></li>
+      </ul>
+
+      <!-- Call‑to‑action button -->
+      <a href="mailto:mail@business.com?subject=Записаться" class="button primary">ЗАПИСАТЬСЯ К НАМ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Прайс‑лист ===== -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">ПРАЙС‑ЛИСТ</h2>
+    <div id="accordion"></div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 BeautySphere. Все права защищены.</p>
+  </div>
+</footer>
+
+<script>
+/* ---------- Настройки IndexedDB ---------- */
+const DB_NAME = 'beautyspherePrices';
+const DB_VERSION = 2;  // увеличиваем версию, чтобы применился новый seed
+const STORE = 'prices';
+
+/* ---------- Расширенный наполнитель (seed) ---------- */
+const seed = [
+  /* Инъекционная косметология */
+  {category:'Инъекционная косметология', service:'Ботокс — лоб',                          price:'2 500 ₽'},
+  {category:'Инъекционная косметология', service:'Ботокс — переносица',                   price:'2 500 ₽'},
+  {category:'Инъекционная косметология', service:'Ботокс — зона «гусиные лапки»',         price:'2 600 ₽'},
+  {category:'Инъекционная косметология', service:'Мезотерапия лица',                      price:'4 800 ₽'},
+  {category:'Инъекционная косметология', service:'Биоревитализация (1 сеанс)',            price:'5 500 ₽'},
+  {category:'Инъекционная косметология', service:'Плазмолифтинг',                         price:'6 500 ₽'},
+
+  /* Аппаратная косметология */
+  {category:'Аппаратная косметология',   service:'RF‑лифтинг — лицо',                     price:'3 500 ₽'},
+  {category:'Аппаратная косметология',   service:'RF‑лифтинг — шея и декольте',           price:'4 000 ₽'},
+  {category:'Аппаратная косметология',   service:'Микротоки (сеанс)',                     price:'2 200 ₽'},
+  {category:'Аппаратная косметология',   service:'Ультразвуковая чистка',                 price:'1 800 ₽'},
+  {category:'Аппаратная косметология',   service:'Лазерная шлифовка',                     price:'9 000 ₽'},
+
+  /* Уходовые процедуры */
+  {category:'Уходовые процедуры',        service:'Увлажняющий комплекс',                  price:'2 000 ₽'},
+  {category:'Уходовые процедуры',        service:'Альгинатная маска',                     price:'1 200 ₽'},
+  {category:'Уходовые процедуры',        service:'Химический пилинг',                     price:'3 000 ₽'},
+  {category:'Уходовые процедуры',        service:'Анти‑акне программа (1 сеанс)',         price:'3 800 ₽'},
+
+  /* Тело */
+  {category:'Тело',                      service:'LPG‑массаж 45 мин',                     price:'3 200 ₽'},
+  {category:'Тело',                      service:'LPG‑массаж — курс 10 сеансов',          price:'29 000 ₽'},
+  {category:'Тело',                      service:'Криолиполиз (1 зона)',                  price:'7 500 ₽'},
+  {category:'Тело',                      service:'Антицеллюлитный массаж 60 мин',         price:'2 800 ₽'},
+  {category:'Тело',                      service:'RF‑лифтинг тела — живот',               price:'4 200 ₽'}
+];
+
+/* ---------- Открываем / создаём IndexedDB ---------- */
+function openDb(){
+  return new Promise((resolve, reject)=>{
+    const req = indexedDB.open(DB_NAME, DB_VERSION);
+
+    req.onupgradeneeded = e => {
+      const db = e.target.result;
+      let store;
+      if (!db.objectStoreNames.contains(STORE)) {
+        store = db.createObjectStore(STORE, {keyPath:'id', autoIncrement:true});
+        store.createIndex('category', 'category', {unique:false});
+      } else {
+        store = req.transaction.objectStore(STORE);
+        store.clear(); // очищаем старые данные при обновлении версии
+      }
+      seed.forEach(item => store.add(item));
+    };
+
+    req.onsuccess = e => resolve(e.target.result);
+    req.onerror   = e => reject(e.target.error);
+  });
+}
+
+/* ---------- Читаем все записи ---------- */
+async function getAllRows(){
+  const db = await openDb();
+  return new Promise((resolve, reject)=>{
+    const tx = db.transaction(STORE, 'readonly');
+    const store = tx.objectStore(STORE);
+    const rows = [];
+
+    store.openCursor().onsuccess = e => {
+      const c = e.target.result;
+      if (c) { rows.push(c.value); c.continue(); }
+      else   { resolve(rows); }
+    };
+    store.openCursor().onerror = e => reject(e.target.error);
+  });
+}
+
+/* ---------- Рисуем аккордеон ---------- */
+function render(rows){
+  const acc = document.getElementById('accordion');
+  acc.innerHTML = '';
+
+  const grouped = rows.reduce((m,r)=>((m[r.category] ??= []).push(r),m),{});
+
+  Object.entries(grouped).forEach(([cat,list])=>{
+    const det = document.createElement('details');
+    det.className = 'price-item';
+    const summary = document.createElement('summary');
+    summary.textContent = cat;
+    det.appendChild(summary);
+
+    const tbl = document.createElement('table');
+    list.forEach(r=>{
+      tbl.insertAdjacentHTML('beforeend',
+        `<tr><td>${r.service}</td><td>${r.price}</td></tr>`);
+    });
+    det.appendChild(tbl);
+    acc.appendChild(det);
+  });
+}
+
+/* ---------- Запуск ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+  getAllRows()
+    .then(render)
+    .catch(() => {
+      document.getElementById('accordion').textContent = 'Ошибка загрузки прайса :(';
+    });
+});
+</script>
+
+</body>
+</html>

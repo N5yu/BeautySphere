@@ -1,0 +1,384 @@
+/* ==============================
+   BeautySphere — main stylesheet
+   streamlined & fixed (2025‑04)
+   ============================== */
+
+/* ---------- RESET ---------- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    flex-grow: 1; /* pushes footer down */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* ---------- HEADER ---------- */
+  .header {
+    background: #fff;
+    padding: 1rem 0;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-image {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: inherit;
+    transition: color .3s;
+  }
+  
+  .nav-list a:hover {
+    color: #ff6f61;
+  }
+  
+  /* ---------- BUTTONS ---------- */
+  .button {
+    display: inline-block;
+    padding: .8rem 1.6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+  }
+  
+  .button.primary {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+  }
+  
+  .button.primary:hover {
+    background: #444;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .2);
+  }
+  
+  .button.secondary {
+    background: #B0BEC5;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+  }
+  
+  .button.secondary:hover {
+    background: #90A4AE;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .2);
+  }
+  
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    height: 510px;          /* фиксированная высота слайда */
+    background: #FFB74D;    /* fallback‑цвет */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  #hero .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity .8s;
+  }
+  
+  #hero .slide.active {
+    opacity: 1;
+    z-index: 5;
+  }
+  
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    max-width: 50%;
+    z-index: 10;
+    color: #fff;
+    animation: fadeInLeft 1s ease-out both;
+  }
+  
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to   { opacity: 1; transform: translateX(0);      }
+  }
+  
+  .hero-title    { font-size: 2.5rem; margin-bottom: 1rem; }
+  .hero-subtitle { font-size: 1.2rem;  margin-bottom: 2rem; }
+  
+  /* ---------- HERO SLIDER ARROWS ---------- */
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .25s, box-shadow .25s;
+    z-index: 30;
+    color: #111;
+  }
+  
+  .slider-arrow.prev { left: 20px; }
+  .slider-arrow.next { right: 20px; }
+  
+  .slider-arrow:hover {
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .25);
+  }
+  
+  /* ---------- SECTIONS ---------- */
+  .section {
+    padding: 3rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .grid-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* ---------- NEWS ---------- */
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .news-item {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 5px;
+  }
+  
+  .news-title { font-size: 1.2rem; text-decoration: none; color: inherit; }
+  .news-date  { font-size: .9rem;  color: #666; margin-bottom: .5rem; }
+  
+  .news-container { display: flex; gap: 20px; align-items: flex-start; }
+  .news-image     { max-width: 300px; flex-shrink: 0; }
+  .news-content   { max-width: 800px; }
+  .news-text      { font-size: 1.2rem; line-height: 1.6; }
+  
+  /* ---------- SERVICE CATEGORIES ---------- */
+  .main-category      { font-size: 2rem; margin: 3rem 0 1rem; }
+  .subcategory        { font-size: 1.4rem; margin: 1.5rem 0 1rem; color: #555; }
+  
+  .service-pairs-grid { display: flex; flex-direction: column; gap: 2rem; max-width: 1000px; margin: 0 auto 3rem; }
+  .service-pair       { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center; }
+  .service-name       { font-weight: 700; font-size: 1.1rem; }
+  .service-desc       { color: #777;    font-size: .95rem; }
+  
+  /* ---------- CTA & FOOTER ---------- */
+  .cta {
+    background: #f8f8f8;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .cta-title { font-size: 2rem; margin-bottom: 1rem; }
+  .cta-text  { font-size: 1.2rem; margin-bottom: 2rem; }
+  
+  .footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+  }
+  
+  /* ---------- DROPDOWNS ---------- */
+  .nav-item.dropdown { position: relative; }
+  
+  /* level‑1 dropdown */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity .3s, transform .3s;
+    z-index: 1000;
+  }
+  
+  .nav-item.dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* level‑2+ submenu */
+  .dropdown-submenu { position: relative; }
+  
+  .dropdown-submenu > .submenu {
+    top: 0;
+    left: 100%;
+    background: #fff;
+    min-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
+    padding: 0 0 10px;          /* убрали верхний отступ */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+    transition: opacity .3s, transform .3s;
+  }
+  
+  .dropdown-submenu:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  
+  /* menu items */
+  .dropdown-menu li { list-style: none; }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background .2s, padding .2s, color .2s;
+  }
+  
+  .dropdown-menu a:hover {
+    background: #f8f8f8;
+    color: #ff6f61;
+    padding-left: 25px;
+  }
+  
+  /* убираем псевдо‑стрелочки */
+  .nav-item.dropdown > a::after,
+  .dropdown-submenu > a::after { content: none; }
+  
+.nav-list > li.dropdown > .dropdown-menu {
+    padding: 10px 0;
+  }
+  
+  /* все вложенные меню (level‑2+) — без верхнего и нижнего
+     отступа, позиционируются ровно у края */
+  .dropdown-menu .dropdown-menu {
+    top: 0;               /* выравниваем по верхнему краю родительского li */
+    left: 100%;           /* открываем справа */
+    padding: 0;           /* убираем тот самый 10‑px gap */
+    margin: 0;
+  }
+
+  /* ====== Service grid – как на макете ② ========================= */
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);   /* три карточки в ряд на desktop */
+    gap:34px 26px;                         /* вертикаль / горизонталь */
+    max-width:100%;                        /* тянется во всю ширину родителя */
+    margin-bottom:3rem;
+    padding:0;
+    list-style:none;
+  }
+  @media(max-width:920px){
+    .service-grid{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media(max-width:600px){
+    .service-grid{ grid-template-columns:1fr; }
+  }
+  
+  .service-grid li{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start; 
+    margin-bottom: 3.5rem;  /* весь текст строго слева */
+  }
+  
+  .service-name{
+    font-weight:700;
+    margin-bottom:4px;
+  }
+  
+  .service-desc{
+    font-size:.9rem;
+    color:#777;
+    line-height:1.35;
+  }
+  
+  /* убираем прежние центровщики */
+  .service-pairs-grid,
+  .service-pair{ all:unset; }   /* аннулируем старые правила */
+  
