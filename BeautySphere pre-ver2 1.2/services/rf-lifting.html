@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RF-лифтинг – BeautySphere</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../libs/sqljs/sql-wasm.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+
+  <!-- Баннер -->
+  <section class="hero">
+    <div class="slide active">
+      <img src="../assets/rf-ka.jpg" alt="RF-лифтинг" class="hero-image">
+      <div class="hero-content">
+        <h1 class="hero-title">RF‑ЛИФТИНГ</h1>
+        <p class="hero-subtitle">Подтяжка кожи без операции</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Заголовок -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Что такое RF-лифтинг?</h2>
+      <p class="news-text">
+        RF‑лифтинг (радиочастотный лифтинг) — это неинвазивная косметологическая процедура, направленная на омоложение и подтяжку кожи с помощью радиоволн. Тепло, создаваемое в глубоких слоях кожи, стимулирует выработку коллагена и эластина.
+      </p>
+    </div>
+  </section>
+
+  <!-- Проблемы -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Какие проблемы решает?</h2>
+      <div class="grid">
+        <div class="card">
+          <h4>Обвисание кожи</h4>
+          <p>Устраняет дряблость и делает кожу упругой.</p>
+        </div>
+        <div class="card">
+          <h4>Размытый овал лица</h4>
+          <p>Восстанавливает чёткость контуров и подтягивает нижнюю треть.</p>
+        </div>
+        <div class="card">
+          <h4>Морщины</h4>
+          <p>Разглаживает мимические и возрастные морщины.</p>
+        </div>
+        <div class="card">
+          <h4>Потеря тонуса</h4>
+          <p>Возвращает эластичность и свежесть коже.</p>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Преимущества -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Преимущества процедуры</h2>
+      <div class="adv-grid">
+        <div class="card">
+          <h4>Без боли и уколов</h4>
+          <p>Процедура проходит без инъекций и неприятных ощущений — только мягкое и комфортное тепло.</p>
+        </div>
+        <div class="card">
+          <h4>Без реабилитации</h4>
+          <p>После сеанса можно сразу вернуться к делам — никаких покраснений или отёков.</p>
+        </div>
+        <div class="card">
+          <h4>Универсально</h4>
+          <p>Подходит для всех возрастов и типов кожи, как для профилактики, так и коррекции.</p>
+        </div>
+        <div class="card">
+          <h4>Накопительный эффект</h4>
+          <p>Результат усиливается с каждой процедурой и сохраняется до 6–12 месяцев.</p>
+        </div>
+        <div class="card">
+          <h4>Улучшает микроциркуляцию</h4>
+          <p>RF-ток активизирует кровообращение и лимфоотток, уменьшая отёчность и улучшая цвет лица.</p>
+        </div>
+        <div class="card">
+          <h4>Быстрый эффект</h4>
+          <p>Уже после первой процедуры кожа становится более упругой и подтянутой.</p>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Цены -->
+  <section class="section">
+    <div class="container">
+    <h2 class="section-title">Цены на RF-лифтинг</h2>
+    <div id="accordion"></div>
+    </div>
+ </section>
+
+  <!-- Механизм действия -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Механизм действия</h2>
+      <div class="mechanism-block">
+        <img src="../assets/rf-m.jpg" alt="Механизм RF-лифтинга" class="mechanism-image">
+        <p class="news-text" style="max-width: 800px; margin-top: 1.5rem;">
+          Радиочастотные волны проникают в глубокие слои кожи и вызывают её прогрев. Это стимулирует фибробласты к активной выработке коллагена и эластина, улучшая тонус и плотность кожи. Уже после первой процедуры кожа становится более подтянутой и упругой.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Противопоказания -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Противопоказания</h2>
+      <div class="grid">
+        <div class="card">
+          <h4>Беременность и лактация</h4>
+          <p>Процедура не проводится в этот период из соображений безопасности.</p>
+        </div>
+        <div class="card">
+          <h4>Импланты и стимуляторы</h4>
+          <p>Противопоказана при наличии металлических конструкций и кардиостимуляторов.</p>
+        </div>
+        <div class="card">
+          <h4>Онкология</h4>
+          <p>Запрещено при злокачественных новообразованиях любой локализации.</p>
+        </div>
+        <div class="card">
+          <h4>Кожные заболевания</h4>
+          <p>Не рекомендуется при воспалениях, инфекциях и повреждениях кожи в зоне воздействия.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Результат -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Результат процедуры</h2>
+      <div class="mechanism-block">
+        <img src="../assets/rf-resultjpg.jpg" alt="Результат после RF-лифтинга" class="mechanism-image">
+      </div>
+      <div class="adv-grid" style="margin-top: 2rem;">
+        <div class="card">
+          <h4>Подтянутый овал лица</h4>
+          <p>Кожа становится упругой и чётко очерченной.</p>
+        </div>
+        <div class="card">
+          <h4>Меньше морщин</h4>
+          <p>Разглаживаются мимические и возрастные линии.</p>
+        </div>
+        <div class="card">
+          <h4>Повышение тонуса</h4>
+          <p>Уже после первого сеанса кожа выглядит плотнее и свежее.</p>
+        </div>
+        <div class="card">
+          <h4>Свежий цвет лица</h4>
+          <p>Уменьшается отёчность, улучшается микроциркуляция и лимфоотток.</p>
+        </div>
+        <div class="card">
+          <h4>Обновление текстуры</h4>
+          <p>Кожа становится более гладкой, эластичной и сияющей.</p>
+        </div>
+        <div class="card">
+          <h4>Продолжительный эффект</h4>
+          <p>Результат сохраняется до 6–12 месяцев после курса процедур.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 BeautySphere. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- Скрипт -->
+  <script src="../script.js"></script>
+</body>
+</html>
